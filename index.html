@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva tu lavado de vehículo con Peluche Carwash.">
+  <meta name="author" content="Wilbel Benitez">
+  <title>Peluche Carwash | Reserva tu lavado</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="app-root">
+<header><div class="wrap nav">
+<a class="brand" href="#inicio"><span class="brand-icon">🧸</span><span>PELUCHE<small>CARWASH & DETAILING</small></span></a>
+<nav class="navlinks"><a href="#servicios">Servicios</a><a href="#reservar">Reservar</a><a href="#mis-citas">Mis citas</a></nav>
+<a class="btn primary" href="#reservar">Agendar lavado ↗</a>
+
+<div class="ubicacion-negocio">
+    <span>📍</span>
+    <a href="https://www.google.com/maps/place/Peluche+car+wash/@18.4420525,-69.0107465,17z/data=!3m1!4b1!4m6!3m5!1s0x8eaf57000ae9389d:0x158b9104ba99d0e5!8m2!3d18.4420525!4d-69.0081716!16s%2Fg%2F11xt17jzy1?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ver ubicación en Google Maps
+    </a>
+</div>
+
+</div></header>
+<main>
+<section class="wrap hero" id="inicio">
+<div><div class="eyebrow">Tu vehículo, como nuevo</div><h1>Más brillo.<br><span>Menos espera.</span></h1><p>Reserva tu lavado en minutos. Elige el servicio, selecciona la fecha y hora que te convenga, y llega con tu espacio agendado.</p>
+<div class="hero-actions"><a class="btn primary" href="#reservar">📅 Reservar ahora</a><a class="btn secondary" href="#servicios">Ver servicios ↓</a></div>
+<div class="hero-stats"><div class="stat"><strong>3 servicios</strong><span>Para cada necesidad</span></div><div class="stat"><strong>Fácil y rápido</strong><span>Reserva en línea</span></div><div class="stat"><strong>RD$</strong><span>Precios en pesos</span></div></div>
+</div>
+<div class="hero-art" aria-label="Ilustración de vehículo limpio"><span class="shine s1">✦</span><span class="shine s2">✧</span><div class="car">🚘</div><div class="art-label"><div><strong>Tu próximo lavado empieza aquí</strong><small>Agenda el día y la hora</small></div><span style="font-size:24px;color:var(--lime)">↗</span></div></div>
+</section>
+<section class="wrap section" id="servicios">
+<div class="section-head"><div><div class="eyebrow">Cuida cada detalle</div><h2>Elige tu servicio</h2></div><p>Precios de ejemplo, editables según tu negocio.</p></div>
+<div class="services">
+<article class="service"><div class="service-icon">💧</div><h3>Lavado básico</h3><p>Lavado exterior y limpieza rápida para mantener tu vehículo impecable.</p><div class="price">RD$ 300 <small>/ desde</small></div><button class="btn secondary choose-service" data-service="Lavado básico" data-price="300" style="width:100%">Seleccionar servicio</button></article>
+<article class="service featured"><span class="badge">POPULAR</span><div class="service-icon">✨</div><h3>Lavado completo</h3><p>Exterior, aspirado interior y limpieza de tablero y superficies.</p><div class="price">RD$ 600 <small>/ desde</small></div><button class="btn primary choose-service" data-service="Lavado completo" data-price="600" style="width:100%">Seleccionar servicio</button></article>
+<article class="service"><div class="service-icon">🚘</div><h3>Lavado premium</h3><p>Atención más detallada para un acabado brillante y cuidado extra.</p><div class="price">RD$ 1,000 <small>/ desde</small></div><button class="btn secondary choose-service" data-service="Lavado premium" data-price="1000" style="width:100%">Seleccionar servicio</button></article>
+</div>
+</section>
+<section class="booking-area section" id="reservar"><div class="wrap booking-grid">
+<div class="booking-copy"><div class="eyebrow">Reserva tu espacio</div><h2>Tu cita, a tu manera.</h2><p>Completa tus datos, elige el tipo de vehículo y selecciona un horario disponible. En esta demostración, las citas se guardan en este navegador.</p>
+<div class="perks"><div class="perk"><span class="check">✓</span><span>Selecciona el servicio que necesitas.</span></div><div class="perk"><span class="check">✓</span><span>Consulta los horarios por fecha.</span></div><div class="perk"><span class="check">✓</span><span>Guarda tu reserva y consulta tus citas.</span></div><div class="perk"><span class="check">✓</span><span>Prepara el mensaje para WhatsApp.</span></div></div>
+</div>
+<form class="form-card" id="booking-form">
+<h3>Agendar un lavado</h3><p class="sub">Los campos marcados son obligatorios.</p>
+<div class="form-grid">
+<div class="field"><label for="nombre">Nombre completo *</label><input id="nombre" required maxlength="80" placeholder="Tu nombre"></div>
+<div class="field"><label for="telefono">Teléfono / WhatsApp *</label><input id="telefono" required type="tel" maxlength="20" placeholder="809 000 0000"></div>
+<div class="field"><label for="vehiculo">Tipo de vehículo *</label><select id="vehiculo" required><option value="">Selecciona</option><option>Carro / Sedan</option><option>Yipeta / SUV</option><option>Pickup</option><option>Minivan</option><option>Motocicleta</option></select></div>
+<div class="field"><label for="placa">Matrícula (opcional)</label><input id="placa" maxlength="15" placeholder="Ej. A123456"></div>
+<div class="field full"><label for="servicio">Servicio *</label><select id="servicio" required><option value="">Selecciona un servicio</option><option value="Lavado básico" data-price="300">Lavado básico — RD$ 300</option><option value="Lavado completo" data-price="600">Lavado completo — RD$ 600</option><option value="Lavado premium" data-price="1000">Lavado premium — RD$ 1,000</option></select></div>
+<div class="field"><label for="fecha">Fecha *</label><input id="fecha" type="date" required></div>
+<div class="field"><label for="hora-hidden">Horario seleccionado *</label><input id="hora-hidden" readonly required placeholder="Elige una hora abajo" style="cursor:default"></div>
+<div class="field full"><label>Horarios disponibles</label><div class="slots" id="slots"></div></div>
+<div class="field full"><label for="notas">Notas (opcional)</label><textarea id="notas" maxlength="300" placeholder="Detalles del vehículo o solicitud especial..."></textarea></div>
+</div>
+<div class="summary"><div><strong id="summary-service">Elige un servicio</strong><br><span>Precio estimado · se paga en el carwash</span></div><strong id="summary-price">RD$ 0</strong></div>
+<button class="btn primary form-submit" type="submit">Confirmar cita →</button>
+<p class="notice">La reserva queda guardada localmente en este prototipo. No representa una confirmación enviada al negocio.</p>
+<div id="form-message" class="message" role="status"></div>
+</form>
+</div></section>
+<section class="wrap section" id="mis-citas"><div class="section-head"><div><div class="eyebrow">Tus reservas</div><h2>Mis citas</h2></div><button class="btn secondary" id="refresh-bookings">Actualizar lista</button></div><div class="admin" style="margin-top:0"><div class="admin-top"><div><strong>Reservas guardadas en este dispositivo</strong><div style="color:var(--muted);font-size:12px">Para gestionar citas desde varios dispositivos necesitas una base de datos y un servidor.</div></div><button class="btn secondary" id="export-bookings">Exportar CSV</button></div><div class="admin-list" id="booking-list"></div></div></section>
+<section class="wrap section" style="padding-top:0"><div class="admin"><div class="admin-top"><div><strong>Configura tu WhatsApp</strong><div style="color:var(--muted);font-size:12px">Introduce el número del negocio para que el cliente pueda enviar la reserva.</div></div></div><div class="form-grid" style="margin-top:15px"><div class="field"><label for="business-phone">WhatsApp del carwash (con código de país)</label><input id="business-phone" type="tel" placeholder="Ej. 18095551234"></div><div class="field" style="justify-content:end"><button class="btn secondary" id="save-phone" type="button">Guardar número</button></div></div><p class="notice" style="text-align:left">Este prototipo no bloquea horarios en un servidor: dos clientes en dispositivos diferentes podrían reservar la misma hora. Para producción se debe conectar a una base de datos y validar disponibilidad en el servidor.</p></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span>Peluche Carwash. Todos los derechos reservados.</span><span>Hecho para reservar con facilidad ✦</span></div></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const STORAGE_KEY='brillo_carwash_bookings_v1';
+const PHONE_KEY='brillo_carwash_phone_v1';
+const prices={'Lavado básico':300,'Lavado completo':600,'Lavado premium':1000};
+const times=['8:00 AM','9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM'];
+let selectedTime='';
+const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());$('fecha').min=today.toISOString().slice(0,10);$('fecha').value=today.toISOString().slice(0,10);$('year').textContent=new Date().getFullYear();
+function getBookings(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch{return []}}
+function setBookings(v){localStorage.setItem(STORAGE_KEY,JSON.stringify(v))}
+function money(v){return 'RD$ '+Number(v).toLocaleString('es-DO')}
+function updateSummary(){const s=$('servicio').value,p=prices[s]||0;$('summary-service').textContent=s||'Elige un servicio';$('summary-price').textContent=money(p)}
+function drawSlots(){const date=$('fecha').value;const box=$('slots');box.innerHTML='';selectedTime='';$('hora-hidden').value='';const bookings=getBookings();const now=new Date();times.forEach(t=>{const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=t;const occupied=bookings.some(x=>x.fecha===date&&x.hora===t&&x.estado!=='Cancelada');const hour24=parseTime(t);const isPast=date===today.toISOString().slice(0,10)&&hour24<=now.getHours();b.disabled=occupied||isPast;b.title=occupied?'Horario reservado':isPast?'Horario pasado':'Seleccionar '+t;if(occupied)b.textContent=t+' · Ocupado';b.addEventListener('click',()=>{selectedTime=t;$('hora-hidden').value=t;box.querySelectorAll('.slot').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});box.appendChild(b)})}
+function parseTime(t){let [clock,ampm]=t.split(' ');let [h]=clock.split(':').map(Number);if(ampm==='PM'&&h!==12)h+=12;if(ampm==='AM'&&h===12)h=0;return h}
+function showMessage(text,type){const el=$('form-message');el.textContent=text;el.className='message '+type}
+$('fecha').addEventListener('change',drawSlots);$('servicio').addEventListener('change',updateSummary);
+document.querySelectorAll('.choose-service').forEach(b=>b.addEventListener('click',()=>{$('servicio').value=b.dataset.service;updateSummary();$('reservar').scrollIntoView({behavior:'smooth'});}));
+$('booking-form').addEventListener('submit',e=>{e.preventDefault();if(!selectedTime){showMessage('Selecciona un horario disponible antes de confirmar.','error');return}const date=$('fecha').value;if(!date||date<$('fecha').min){showMessage('Selecciona una fecha válida.','error');return}const list=getBookings();if(list.some(x=>x.fecha===date&&x.hora===selectedTime&&x.estado!=='Cancelada')){showMessage('Ese horario acaba de ocuparse. Selecciona otro.','error');drawSlots();return}const service=$('servicio').value;const item={id:'BC-'+Date.now().toString().slice(-8),nombre:$('nombre').value.trim(),telefono:$('telefono').value.trim(),vehiculo:$('vehiculo').value,placa:$('placa').value.trim(),servicio:service,precio:prices[service],fecha:date,hora:selectedTime,notas:$('notas').value.trim(),estado:'Pendiente',creada:new Date().toISOString()};list.push(item);setBookings(list);renderBookings();drawSlots();showMessage('¡Cita guardada! Tu número de reserva es '+item.id+'. Puedes enviar los detalles por WhatsApp si el negocio tiene su número configurado.','ok');const phone=localStorage.getItem(PHONE_KEY)||'';if(phone){const msg=`Hola, quiero confirmar una cita en Brillo Carwash.%0AReserva: ${item.id}%0ANombre: ${encodeURIComponent(item.nombre)}%0ATeléfono: ${encodeURIComponent(item.telefono)}%0AVehículo: ${encodeURIComponent(item.vehiculo)}%0AServicio: ${encodeURIComponent(item.servicio)}%0AFecha: ${item.fecha}%0AHora: ${encodeURIComponent(item.hora)}%0APrecio estimado: ${encodeURIComponent(money(item.precio))}%0AMatrícula: ${encodeURIComponent(item.placa||'No indicada')}%0ANotas: ${encodeURIComponent(item.notas||'Ninguna')}`;window.open('https://wa.me/'+phone.replace(/\D/g,'')+'?text='+msg,'_blank','noopener')}else{showMessage('¡Cita guardada! Reserva '+item.id+'. Para enviar por WhatsApp, configura el número del negocio abajo.','ok')}});
+function renderBookings(){const list=getBookings().sort((a,b)=>(a.fecha+a.hora).localeCompare(b.fecha+b.hora));const box=$('booking-list');box.innerHTML='';if(!list.length){box.innerHTML='<div class="empty">Todavía no hay citas guardadas. Agenda tu primer lavado arriba.</div>';return}list.slice().reverse().forEach(item=>{const row=document.createElement('div');row.className='booking-item';const info=document.createElement('div');const strong=document.createElement('strong');strong.textContent=item.nombre+' · '+item.servicio;const small=document.createElement('small');small.textContent=`${item.fecha} · ${item.hora} · ${item.vehiculo} · ${money(item.precio)} · ${item.id}`;info.append(strong,small);const right=document.createElement('div');right.style.display='flex';right.style.gap='8px';right.style.alignItems='center';const status=document.createElement('span');status.className='status';status.textContent=item.estado;right.append(status);if(item.estado!=='Cancelada'){const cancel=document.createElement('button');cancel.className='btn secondary';cancel.style.padding='7px 10px';cancel.textContent='Cancelar';cancel.addEventListener('click',()=>{if(confirm('¿Cancelar la reserva '+item.id+'?')){const all=getBookings();const found=all.find(x=>x.id===item.id);if(found)found.estado='Cancelada';setBookings(all);renderBookings();drawSlots()}});right.append(cancel)}row.append(info,right);box.append(row)})}
+$('refresh-bookings').addEventListener('click',()=>{renderBookings();drawSlots()});
+$('save-phone').addEventListener('click',()=>{const p=$('business-phone').value.trim().replace(/\D/g,'');if(p.length<10){alert('Escribe el número completo con código de país. Ejemplo: 18095551234');return}localStorage.setItem(PHONE_KEY,p);alert('Número de WhatsApp guardado en este navegador.')});
+$('business-phone').value=localStorage.getItem(PHONE_KEY)||'';
+$('export-bookings').addEventListener('click',()=>{const rows=getBookings();if(!rows.length){alert('No hay citas para exportar.');return}const cols=['id','nombre','telefono','vehiculo','placa','servicio','precio','fecha','hora','estado','notas'];const esc=v=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[cols.join(','),...rows.map(r=>cols.map(c=>esc(r[c])).join(','))].join('\r\n');const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='citas-carwash.csv';a.click();URL.revokeObjectURL(a.href)});
+renderBookings();updateSummary();drawSlots();
+</script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
